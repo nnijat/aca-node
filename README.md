@@ -1,6 +1,6 @@
 # Intro
 The purpose of this project is to demonstrate that node.js is nothing special. 
-Anyone can create a program that interprets input as code and processes it accordingly.
+Anyone can create a program that interprets input as code, processes it accordingly and then outputs something.
 
 # Instructions
 Write a program that will use readline to take user input.
