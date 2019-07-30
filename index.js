@@ -20,14 +20,17 @@ const rl = readline.createInterface({
 
 let num1;
 let num2;
+let varValue = '';
+let whateverVar = [];
 
-
-rl.question('What do you want to ask? ', (askedQuestion) => {
+rl.question('ask me your question, I will give you the answer? ', (askedQuestion) => {
     answerAI(askedQuestion);
     return rl.close();
 });
 
 function answerAI(askedQuestion) {
+
+
     let operator = operatorDetector(askedQuestion);
     switch (operator) {
         /*********************************************** Calculator ******************************************************/
@@ -113,7 +116,19 @@ function answerAI(askedQuestion) {
                 console.log("Invalid input, Please contact customer services");
             }
             break;
+        case 'let':
+            varValue = '';
+            const arr = askedQuestion.split(' ')
+            whateverVar = arr[1]
 
+            for (let i = 3; i < arr.length; i++) {
+                varValue += arr[i] + ' '
+            }
+
+            console.log("Your input is: ", askedQuestion)
+            console.log("your variable name is:", whateverVar)
+            console.log("Your variable value is: ", varValue)
+            break;
         default:
             console.log('Sorry, we can handle your own operator sign.');
     }
