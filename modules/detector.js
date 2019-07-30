@@ -1,6 +1,5 @@
 'use strict';
 
-//let askedQuestion = "";
 let operator;
 
 function operatorDetector(askedQuestion) {
@@ -35,6 +34,10 @@ function operatorDetector(askedQuestion) {
     }
     else if (askedQuestion.includes('!==')) {
         operator = '!==';
+        return operator;
+    }
+    else if (askedQuestion.includes('let')) {
+        operator = 'let';
         return operator;
     }
 }
